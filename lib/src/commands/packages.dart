@@ -37,12 +37,12 @@ class PackagesGetCommand extends Command<int> {
       )
       ..addFlag(
         'offline',
-        help: 'Get packages offline'
+        help: 'Get packages offline',
+        defaultsTo: true,
       );
   }
 
   final Logger _logger;
-
 
   @override
   String get description => 'Get packages in a Dart or Flutter project.';
@@ -72,7 +72,7 @@ class PackagesGetCommand extends Command<int> {
         await Flutter.packagesGet(
           cwd: targetPath,
           recursive: recursive,
-          offline: offline,,
+          offline: offline,
           logger: _logger,
         );
       } on PubspecNotFound catch (_) {
