@@ -107,7 +107,7 @@ void main() {
       }),
     );
 
-    test('can be instantiated without explicit logger', () {
+    test('can be instantiated without explicit generators', () {
       final command = LegacyCreateCommand(analytics: analytics, logger: logger);
       expect(command, isNotNull);
     });

@@ -222,7 +222,8 @@ abstract class CreateSubCommand extends Command<int> {
   /// Responsible for returns the template parameters to be passed to the
   /// template brick.
   ///
-  /// Override if the create subcomamnd requires additional template parameters.
+  /// Override if the create sub command requires additional template
+  /// parameters.
   ///
   /// For subcommands that mix with [OrgName], it includes 'org_name'.
   @mustCallSuper
